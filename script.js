@@ -1,22 +1,47 @@
-// Header scroll effect
+// ============ Header state + scroll spy (rAF-throttled for smoothness) ============
 const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+let ticking = false;
 
-// Mobile menu toggle
+function onScroll() {
+    const scrollY = window.scrollY;
+
+    // Shrink/solidify the header once the user scrolls past the hero edge
+    header.classList.toggle('scrolled', scrollY > 50);
+
+    // Scroll spy: highlight the nav link for the section currently in view
+    let current = '';
+    const pos = scrollY + 120;
+    sections.forEach(section => {
+        if (pos >= section.offsetTop && pos < section.offsetTop + section.offsetHeight) {
+            current = section.id;
+        }
+    });
+    navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+
+    ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+    }
+}, { passive: true });
+
+// ============ Mobile menu toggle ============
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
+
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
 });
 
-// Close menu when a link is clicked
+// Close the mobile menu after tapping a link (the smooth scroll is handled in CSS)
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -24,29 +49,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Active nav link on scroll
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollPos = window.scrollY + 120;
-    sections.forEach(section => {
-        const top = section.offsetTop;
-        const height = section.offsetHeight;
-        if (scrollPos >= top && scrollPos < top + height) {
-            current = section.getAttribute('id');
-        }
-    });
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// Menu category tabs
+// ============ Menu category tabs ============
 const tabBtns = document.querySelectorAll('.tab-btn');
 const menuCards = document.querySelectorAll('.menu-card');
 
@@ -55,18 +58,46 @@ tabBtns.forEach(btn => {
         const category = btn.dataset.cat;
         tabBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
         menuCards.forEach(card => {
-            if (category === 'all' || card.dataset.cat === category) {
-                card.classList.remove('hidden');
-            } else {
-                card.classList.add('hidden');
-            }
+            const show = category === 'all' || card.dataset.cat === category;
+            card.classList.toggle('hidden', !show);
         });
     });
 });
 
-// Contact form (client-side demo handler)
+// ============ Scroll-reveal animations (fade/slide in as sections enter view) ============
+const revealEls = document.querySelectorAll(
+    '.section-header, .about-images, .about-content, .menu-card, ' +
+    '.review-card, .info-card, .map-wrapper, .hours-card, .form-card'
+);
+
+// Give items inside grids a cascading stagger so rows ripple in
+document.querySelectorAll('.menu-grid, .reviews-grid, .location-info').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+        child.style.transitionDelay = (i % 3) * 80 + 'ms';
+    });
+});
+
+if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                revealObserver.unobserve(entry.target); // animate once, then stop watching
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+} else {
+    // No observer support: just show everything
+    revealEls.forEach(el => el.classList.add('in-view'));
+}
+
+// Set the correct nav highlight on initial load
+onScroll();
+
+// ============ Contact form (client-side demo handler) ============
 function handleSubmit(form) {
     const note = document.getElementById('formNote');
     const name = form.name.value.trim();

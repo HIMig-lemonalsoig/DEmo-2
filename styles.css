@@ -1089,24 +1089,52 @@ h1, h2, h3, h4, h5 {
     .logo-mark { width: 38px; height: 38px; font-size: 20px; }
 }
 
-/* ============ Animations ============ */
-@media (prefers-reduced-motion: no-preference) {
-    .menu-card,
-    .review-card,
-    .info-card,
-    .feature {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeUp 0.6s ease forwards;
-    }
-    .menu-card:nth-child(2) { animation-delay: 0.05s; }
-    .menu-card:nth-child(3) { animation-delay: 0.1s; }
-    .menu-card:nth-child(4) { animation-delay: 0.15s; }
-    .menu-card:nth-child(5) { animation-delay: 0.2s; }
-    .menu-card:nth-child(6) { animation-delay: 0.25s; }
-    .menu-card:nth-child(7) { animation-delay: 0.3s; }
-    .menu-card:nth-child(8) { animation-delay: 0.35s; }
+/* ============ Scroll Reveal ============ */
+/* Initial hidden state applies only when JS is active (.js set by an inline head
+   script before first paint), so no-JS users still see all content and there's no flash. */
+.js .section-header,
+.js .about-images,
+.js .about-content,
+.js .menu-card,
+.js .review-card,
+.js .info-card,
+.js .map-wrapper,
+.js .hours-card,
+.js .form-card {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
 }
-@keyframes fadeUp {
-    to { opacity: 1; transform: translateY(0); }
+
+/* Directional slide-in variants for side-by-side blocks */
+.js .about-images,
+.js .hours-card { transform: translateX(-45px); }
+.js .about-content,
+.js .map-wrapper,
+.js .form-card { transform: translateX(45px); }
+
+/* Revealed state — toggled by IntersectionObserver as the element scrolls into view */
+.js .in-view {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Respect users who prefer reduced motion: no transforms, no smooth scroll */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .section-header,
+    .js .about-images,
+    .js .about-content,
+    .js .menu-card,
+    .js .review-card,
+    .js .info-card,
+    .js .map-wrapper,
+    .js .hours-card,
+    .js .form-card {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
