@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hopdoddy Burger Bar | Rice Village, Houston</title>
+    <meta name="description" content="Premium burger restaurant in Rice Village, Houston. Fresh, made-to-order burgers, hand-crafted shakes, and creative sides.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="logo">
+                <span class="logo-mark">H</span>
+                <div class="logo-text">
+                    <span class="logo-name">HOPDODDY</span>
+                    <span class="logo-tag">BURGER BAR</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary nav-cta">Order Now</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-eyebrow">Rice Village • Houston</span>
+            <h1 class="hero-title">
+                Burgers Worth<br>
+                <span class="accent">Crossing Town</span> For
+            </h1>
+            <p class="hero-subtitle">
+                Hand-smashed, never-frozen, all-natural beef. Crafted shakes,
+                creative sides, and a Texas attitude on every plate.
+            </p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">
+                    <i class="fas fa-utensils"></i> Order Now
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="far fa-calendar-alt"></i> Reserve a Table
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">4.5</span>
+                    <div class="stars" aria-label="4.5 stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="stat-label">Google Reviews</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">All-Natural Beef</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-num">15+</span>
+                    <span class="stat-label">Signature Burgers</span>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <div class="about-images">
+                <div class="about-img-main">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80" alt="Gourmet burger">
+                </div>
+                <div class="about-img-small">
+                    <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=600&q=80" alt="Fresh ingredients">
+                </div>
+                <div class="about-badge">
+                    <span class="badge-year">Est.</span>
+                    <span class="badge-num">2010</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-eyebrow">Our Story</span>
+                <h2 class="section-title">Premium Burgers,<br><span class="accent">Made for Houston</span></h2>
+                <p class="lead">
+                    Tucked into the heart of Rice Village, Hopdoddy Burger Bar serves
+                    fresh, made-to-order burgers built on locally sourced ingredients
+                    and a relentless commitment to quality.
+                </p>
+                <p>
+                    From Wagyu beef and creative chef-driven specials to a secret menu
+                    that rewards the curious, every plate is hand-crafted with care.
+                    Pair it with hand-cut Parmesan Truffle Fries and a real-deal milkshake,
+                    and you've got the kind of meal worth the trip.
+                </p>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-seedling"></i>
+                        <h4>Locally Sourced</h4>
+                        <p>Fresh produce and proteins from trusted Texas suppliers.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-fire"></i>
+                        <h4>Hand-Smashed</h4>
+                        <p>Every patty is cooked to order on a smoking-hot griddle.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-ice-cream"></i>
+                        <h4>Hand-Spun Shakes</h4>
+                        <p>Real ice cream, classic flavors, finished by hand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Menu -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">The Menu</span>
+                <h2 class="section-title">Featured <span class="accent">Favorites</span></h2>
+                <p class="section-sub">
+                    A taste of what's coming off the grill. From classics to secret menu legends.
+                </p>
+            </div>
+
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-cat="all">All</button>
+                <button class="tab-btn" data-cat="burgers">Burgers</button>
+                <button class="tab-btn" data-cat="chicken">Chicken</button>
+                <button class="tab-btn" data-cat="sides">Sides</button>
+                <button class="tab-btn" data-cat="shakes">Shakes</button>
+            </div>
+
+            <div class="menu-grid">
+                <article class="menu-card" data-cat="burgers">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=800&q=80" alt="Classic Farmhouse Deluxe Burger">
+                        <span class="tag tag-popular">Popular</span>
+                    </div>
+                    <div class="menu-body">
+                        <div class="menu-head">
+                            <h3>Classic Farmhouse Deluxe</h3>
+                            <span class="price">$13</span>
+                        </div>
+                        <p>Angus beef, aged white cheddar, applewood-smoked bacon, lettuce, tomato, red onion, and Hopdoddy sauce on a fresh-baked bun.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="burgers">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=800&q=80" alt="Wagyu Burger">
+                        <span class="tag tag-premium">Premium</span>
+                    </div>
+                    <div class="menu-body">
+                        <div class="menu-head">
+                            <h3>The Wagyu</h3>
+                            <span class="price">$18</span>
+                        </div>
+                        <p>American Wagyu beef, truffle aioli, caramelized onions, arugula, and aged provolone on a brioche bun. Indulgence in every bite.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="burgers">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80" alt="El Diablo Burger">
+                        <span class="tag tag-spicy">Spicy</span>
+                    </div>
+                    <div class="menu-body">
+                        <div class="menu-head">
+                            <h3>El Diablo</h3>
+                            <span class="price">$14</span>
+                        </div>
+                        <p>Angus beef, habanero cheese, chipotle ketchup, fresh jalapeños, salsa roja, and pepper jack. Hot, smoky, and unforgettable.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="burgers">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&q=80" alt="Poblano Llano Burger">
+                        <span class="tag tag-secret">Secret Menu</span>
+                    </div>
+                    <div class="menu-body">
+                        <div class="menu-head">
+                            <h3>Poblano Llano</h3>
+                            <span class="price">$15</span>
+                        </div>
+                        <p>Roasted poblanos, pepper jack, apple-bacon jam, and chipotle mayo on Angus beef. A secret menu favorite the regulars whisper about.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="chicken">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=800&q=80" alt="Nashville Hot Chicken Sandwich">
+                        <span class="tag tag-spicy">Spicy</span>
+                    </div>
+                    <div class="menu-body">
+                        <div class="menu-head">
+                            <h3>Nashville Hot Chicken</h3>
+                            <span class="price">$13</span>
+                        </div>
+                        <p>Crispy hand-breaded chicken breast, Nashville hot sauce, dill pickles, and creamy slaw on a buttered brioche bun.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="sides">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=800&q=80" alt="Parmesan Truffle Fries">
+                        <span class="tag tag-popular">Popular</span>
+                    </div>
+                    <div class="menu-body">
+                        <div class="menu-head">
+                            <h3>Parmesan Truffle Fries</h3>
+                            <span class="price">$8</span>
+                        </div>
+                        <p>Hand-cut fries tossed in truffle oil, parmesan, and fresh herbs. Served with garlic aioli for dipping.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="sides">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1635030593059-c4ec5f6d3919?w=800&q=80" alt="Sweet Potato Fries">
+                    </div>
+                    <div class="menu-body">
+                        <div class="menu-head">
+                            <h3>Sweet Potato Fries</h3>
+                            <span class="price">$6</span>
+                        </div>
+                        <p>Crispy sweet potato fries with a sweet-and-savory seasoning. Served with chipotle honey mustard.</p>
+                    </div>
+                </article>
+
+                <article class="menu-card" data-cat="shakes">
+                    <div class="menu-img">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80&blend=000000&blend-mode=normal&blend-alpha=0" alt="Hand-Spun Milkshakes" onerror="this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80'">
+                        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=800&q=80" alt="Milkshakes" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover">
+                        <span class="tag tag-popular">Hand-Spun</span>
+                    </div>
+                    <div class="menu-body">
+                        <div class="menu-head">
+                            <h3>Hand-Spun Shakes</h3>
+                            <span class="price">$7</span>
+                        </div>
+                        <p>Real ice cream, hand-spun and made to order. Choose from Nutella, Cookies & Cream, Salted Caramel, or our seasonal special.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="menu-cta">
+                <a href="#contact" class="btn btn-primary btn-large">
+                    See Full Menu <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Customer Love</span>
+                <h2 class="section-title">What Houston <span class="accent">Is Saying</span></h2>
+                <div class="reviews-summary">
+                    <div class="big-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-text"><strong>4.5</strong> out of 5 on Google</span>
+                    <span class="rating-sub">Based on 1,200+ verified reviews</span>
+                </div>
+            </div>
+
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="avatar" style="background:#c41e3a">JM</div>
+                        <div>
+                            <h4>Jessica Martinez</h4>
+                            <div class="stars small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <i class="fab fa-google google-icon" aria-label="Google review"></i>
+                    </div>
+                    <p>"The Wagyu burger is hands down the best burger I've had in Houston. The beef literally melts in your mouth and the truffle fries are addictive. Service was warm and quick, even on a Friday night."</p>
+                    <span class="review-date">2 weeks ago</span>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="avatar" style="background:#1a1a1a">DK</div>
+                        <div>
+                            <h4>David Kim</h4>
+                            <div class="stars small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <i class="fab fa-google google-icon" aria-label="Google review"></i>
+                    </div>
+                    <p>"Fresh ingredients you can actually taste. The El Diablo brought the heat without overpowering the beef — perfect balance. Salted caramel shake closed it out. Will absolutely be back."</p>
+                    <span class="review-date">1 month ago</span>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="avatar" style="background:#c41e3a">SP</div>
+                        <div>
+                            <h4>Sarah Patel</h4>
+                            <div class="stars small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <i class="fab fa-google google-icon" aria-label="Google review"></i>
+                    </div>
+                    <p>"Great food and the Poblano Llano off the secret menu is a must-try. Only downside is parking in Rice Village can be challenging at peak times, but the garage validation helps a lot."</p>
+                    <span class="review-date">3 weeks ago</span>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="avatar" style="background:#1a1a1a">MR</div>
+                        <div>
+                            <h4>Marcus Robinson</h4>
+                            <div class="stars small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <i class="fab fa-google google-icon" aria-label="Google review"></i>
+                    </div>
+                    <p>"Stopped in after a long shift at the Med Center. The Nashville Hot Chicken Sandwich was perfectly crispy and the staff couldn't have been more welcoming. Comfort food done right."</p>
+                    <span class="review-date">1 week ago</span>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="avatar" style="background:#c41e3a">LC</div>
+                        <div>
+                            <h4>Linda Chen</h4>
+                            <div class="stars small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <i class="fab fa-google google-icon" aria-label="Google review"></i>
+                    </div>
+                    <p>"Quality is top tier — fresh, juicy, and clearly made to order. A bit pricier than your average burger spot, but you're paying for premium ingredients and you can taste the difference."</p>
+                    <span class="review-date">2 months ago</span>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="avatar" style="background:#1a1a1a">AT</div>
+                        <div>
+                            <h4>Anthony Torres</h4>
+                            <div class="stars small">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <i class="fab fa-google google-icon" aria-label="Google review"></i>
+                    </div>
+                    <p>"Brought the whole family for dinner. Kids loved the sweet potato fries, my wife raved about the Farmhouse Deluxe, and the milkshakes were the best we've had in town. New regular spot for us."</p>
+                    <span class="review-date">3 weeks ago</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Parking -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Find Us</span>
+                <h2 class="section-title">Located in <span class="accent">Rice Village</span></h2>
+                <p class="section-sub">In the heart of Houston, just minutes from the Medical Center.</p>
+            </div>
+
+            <div class="location-grid">
+                <div class="location-info">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>5510 Morningside Dr, Suite 100<br>Houston, TX 77005</p>
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=5510+Morningside+Dr+Suite+100+Houston+TX+77005" target="_blank" rel="noopener" class="info-link">
+                                Get Directions <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-parking"></i></div>
+                        <div>
+                            <h4>Parking</h4>
+                            <p>2 hours complimentary parking in the Rice Village garage with validation. Additional plaza parking is available throughout the village.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-hospital"></i></div>
+                        <div>
+                            <h4>Near Medical Center</h4>
+                            <p>Just a short drive from Texas Medical Center — perfect for lunch or after-shift dinner.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+12815572337" class="phone-link">+1 (281) 557-2337</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps?q=5510+Morningside+Dr,+Houston,+TX+77005&output=embed"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Hopdoddy Burger Bar Location">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours & Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="hours-card">
+                    <span class="section-eyebrow light">Visit Us</span>
+                    <h2 class="section-title light">Hours of <span class="accent">Operation</span></h2>
+                    <ul class="hours-list">
+                        <li><span>Monday</span><span>11:00 AM – 10:00 PM</span></li>
+                        <li><span>Tuesday</span><span>11:00 AM – 10:00 PM</span></li>
+                        <li><span>Wednesday</span><span>11:00 AM – 10:00 PM</span></li>
+                        <li><span>Thursday</span><span>11:00 AM – 10:00 PM</span></li>
+                        <li class="highlight"><span>Friday</span><span>11:00 AM – 11:00 PM</span></li>
+                        <li class="highlight"><span>Saturday</span><span>11:00 AM – 11:00 PM</span></li>
+                        <li><span>Sunday</span><span>11:00 AM – 9:00 PM</span></li>
+                    </ul>
+                    <div class="contact-quick">
+                        <a href="tel:+12815572337" class="quick-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span class="quick-label">Call</span>
+                                <span class="quick-val">+1 (281) 557-2337</span>
+                            </div>
+                        </a>
+                        <a href="mailto:ricevillage@hopdoddy.com" class="quick-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span class="quick-label">Email</span>
+                                <span class="quick-val">ricevillage@hopdoddy.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <h3>Send Us a Message</h3>
+                    <p>Questions, reservations, or feedback — we'd love to hear from you.</p>
+                    <form class="contact-form" onsubmit="event.preventDefault(); handleSubmit(this);">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="you@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Choose a topic</option>
+                                <option value="reservation">Reservation Request</option>
+                                <option value="catering">Catering Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us how we can help..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <p class="form-note" id="formNote"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="#home" class="logo logo-footer">
+                    <span class="logo-mark">H</span>
+                    <div class="logo-text">
+                        <span class="logo-name">HOPDODDY</span>
+                        <span class="logo-tag">BURGER BAR</span>
+                    </div>
+                </a>
+                <p>Premium burgers, hand-spun shakes, and a Houston welcome — all in the heart of Rice Village.</p>
+                <div class="socials">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h5>Explore</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#location">Location</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Visit</h5>
+                <ul>
+                    <li>5510 Morningside Dr<br>Suite 100<br>Houston, TX 77005</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Contact</h5>
+                <ul>
+                    <li><a href="tel:+12815572337">+1 (281) 557-2337</a></li>
+                    <li><a href="mailto:ricevillage@hopdoddy.com">ricevillage@hopdoddy.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Hopdoddy Burger Bar — Rice Village. All rights reserved.</p>
+                <p><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Accessibility</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
